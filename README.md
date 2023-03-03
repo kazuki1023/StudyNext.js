@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## 参考サイト
+[入門者は基礎からしっかり理解Next.jsの基本(React)](https://reffect.co.jp/react/next-js)
 ## Getting Started
 
 First, run the development server:
