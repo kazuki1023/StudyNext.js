@@ -10,11 +10,11 @@
 ### [name].js
 product/shoes, product/clothes,にすると、[name].jsファイルに記述した”商品のページです”が表示されます。
 
-#### URLに入れた文字列をページ内容に表示させるためuseRouter Hookを利用
+## URLに入れた文字列をページ内容に表示させるためuseRouter Hookを利用
 useRouter Hookはnext/routerからimportする。
 URLに含まれる文字列についてはrouter.query.nameから取得することができます。
 
-#### 更に階層が深い場合
+### 更に階層が深い場合
 [Name]ディレクトリの中に、更に[color].jsを作成する。[参考サイト](http://localhost:3000/product/shoues/red)
 すると、出てくるよ。
 
@@ -26,3 +26,12 @@ export default function Color() {
   const { name, color } = router.query
   return <h1>{ name }の{ color }カラーです</h1>;
 }
+
+### prefetchについて
+リンクがブラウザのviewport(ビューポート)(見えてるところ、スマホ、パソコンの一面)に入ると自動でリンク先のJavaScriptファイルのダウンロードを行う
+
+問題点
+ユーザーにとっては見る気がないかもしれないリソースもフェッチしていること
+
+このリソースのプリフェッチは余分なバイトを消費するので、大量のメモリが必要になったり、ユーザーが通信量を抑えたい（データセーバーモード）設定をしている場合はそれを考慮しなければならない
+[参考サイト](https://uga-box.hatenablog.com/entry/2022/02/08/000000)
